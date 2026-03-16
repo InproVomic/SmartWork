@@ -6,7 +6,6 @@
 *.sln.docstates
 
 # Build results
-x64/
 Debug/
 Release/
 *.obj
@@ -22,5 +21,3 @@ stderr.txt
 # Claude
 .claude/
 
-# Thirdparty
-Thirdparty/
