@@ -6,13 +6,6 @@
 *.sln.docstates
 
 # Build results
-Debug/
-Release/
-*.obj
-*.exe
-*.dll
-*.pdb
-*.log
 
 # Output files
 stdout.txt

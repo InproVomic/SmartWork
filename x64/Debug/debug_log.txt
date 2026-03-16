@@ -1,0 +1,144 @@
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
+Application dir: D:/SmartWork/1/SmartWork/x64/Debug
+Log file path: D:/SmartWork/1/SmartWork/x64/Debug/debug_log.txt
+Checking path: D:/SmartWork/1/SmartWork/x64/ConnectOpenclaw/openclaw_client_working.py
+Checking path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Found script at: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Python script path: D:/SmartWork/1/SmartWork/ConnectOpenclaw/openclaw_client_working.py
+Using hardcoded Python path: C:/Users/cbb123/AppData/Local/Programs/Python/Python310/python.exe
+Starting Python process...
