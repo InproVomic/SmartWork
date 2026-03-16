@@ -1,0 +1,265 @@
+﻿   Qt/MSBuild: 3.4.1.0
+   Qt: 5.12.12
+  GLCore.cpp
+  LAppAllocator.cpp
+  LAppDefine.cpp
+  LAppDelegate.cpp
+  LAppLive2DManager.cpp
+  LAppModel.cpp
+  LAppPal.cpp
+  LAppSprite.cpp
+  LAppTextureManager.cpp
+  LAppView.cpp
+  LAppWavFileHandler.cpp
+  main.cpp
+  SmartWork.cpp
+  TouchManager.cpp
+  ChatClient.cpp
+  ApiManager.cpp
+  ConfigDialog.cpp
+  TcpClient.cpp
+  PythonProcessManager.cpp
+  AvatarConfigDialog.cpp
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x22 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x23 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x26 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x27 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x29 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x2a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x2b 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x2f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x155 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x156 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x157 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x15c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x15e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x15f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x161 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x162 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x165 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x166 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x167 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x168 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x16a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1a1 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1a3 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1aa 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“main.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1e1 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1e2 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1e3 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1e4 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x1e8 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x211 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x212 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x213 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x216 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x217 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x21a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x21b 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x21c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x21d 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x221 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x223 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x225 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x227 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x228 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x262 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x263 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x264 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x265 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x320 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x500 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x501 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x503 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x504 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x506 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x507 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x508 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x509 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x50a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x510 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x513 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x516 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x518 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x519 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.cpp(1,1): warning C4828: 文件包含在偏移 0x51c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppDelegate.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppLive2DManager.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppView.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“LAppModel.cpp”)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: “APIENTRY”: 宏重定义
+  (编译源文件“LAppView.cpp”)
+      D:\SmartWork\1\SmartWork\Thirdparty\glfw\include\GLFW\glfw3.h(123,11):
+      参见“APIENTRY”的前一个定义
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: “APIENTRY”: 宏重定义
+  (编译源文件“GLCore.cpp”)
+      D:\SmartWork\1\SmartWork\Thirdparty\glfw\include\GLFW\glfw3.h(123,11):
+      参见“APIENTRY”的前一个定义
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: “APIENTRY”: 宏重定义
+  (编译源文件“LAppDelegate.cpp”)
+      D:\SmartWork\1\SmartWork\Thirdparty\glfw\include\GLFW\glfw3.h(123,11):
+      参见“APIENTRY”的前一个定义
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: “APIENTRY”: 宏重定义
+  (编译源文件“LAppLive2DManager.cpp”)
+      D:\SmartWork\1\SmartWork\Thirdparty\glfw\include\GLFW\glfw3.h(123,11):
+      参见“APIENTRY”的前一个定义
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: “APIENTRY”: 宏重定义
+  (编译源文件“LAppModel.cpp”)
+      D:\SmartWork\1\SmartWork\Thirdparty\glfw\include\GLFW\glfw3.h(123,11):
+      参见“APIENTRY”的前一个定义
+  
+  qrc_SmartWork.cpp
+  moc_GLCore.cpp
+  moc_SmartWork.cpp
+  moc_ChatClient.cpp
+  moc_ApiManager.cpp
+  moc_ConfigDialog.cpp
+  moc_TcpClient.cpp
+  moc_PythonProcessManager.cpp
+  moc_AvatarConfigDialog.cpp
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x268 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x269 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26c 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26e 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x26f 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+D:\SmartWork\1\SmartWork\SmartWork\GLCore.h(1,1): warning C4828: 文件包含在偏移 0x272 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
+  (编译源文件“x64/Debug/qt/moc/moc_GLCore.cpp”)
+  
+LINK : warning LNK4217: 符号“glewInit”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: bool __cdecl LAppDelegate::Initialize(class GLCore *)" (?Initialize@LAppDelegate@@QEAA_NPEAVGLCore@@@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewAttachShader”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewCompileShader”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewCreateProgram”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewCreateShader”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewDeleteShader”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"private: bool __cdecl LAppDelegate::CheckShader(unsigned int)" (?CheckShader@LAppDelegate@@AEAA_NI@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewGetShaderInfoLog”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"private: bool __cdecl LAppDelegate::CheckShader(unsigned int)" (?CheckShader@LAppDelegate@@AEAA_NI@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewGetShaderiv”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"private: bool __cdecl LAppDelegate::CheckShader(unsigned int)" (?CheckShader@LAppDelegate@@AEAA_NI@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewLinkProgram”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewShaderSource”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewUseProgram”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppDelegate.obj”(函数“"public: unsigned int __cdecl LAppDelegate::CreateShader(void)" (?CreateShader@LAppDelegate@@QEAAIXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewEnableVertexAttribArray”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: void __cdecl LAppSprite::Render(void)const " (?Render@LAppSprite@@QEBAXXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewGetAttribLocation”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: __cdecl LAppSprite::LAppSprite(float,float,float,float,unsigned int,unsigned int)" (??0LAppSprite@@QEAA@MMMMII@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewGetUniformLocation”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: __cdecl LAppSprite::LAppSprite(float,float,float,float,unsigned int,unsigned int)" (??0LAppSprite@@QEAA@MMMMII@Z)”中)导入
+LINK : warning LNK4217: 符号“__glewUniform1i”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: void __cdecl LAppSprite::Render(void)const " (?Render@LAppSprite@@QEBAXXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewUniform4f”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: void __cdecl LAppSprite::Render(void)const " (?Render@LAppSprite@@QEBAXXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewVertexAttribPointer”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppSprite.obj”(函数“"public: void __cdecl LAppSprite::Render(void)const " (?Render@LAppSprite@@QEBAXXZ)”中)导入
+LINK : warning LNK4217: 符号“__glewGenerateMipmap”(在“ libglew32d.lib(glew.obj)”中定义)已由“LAppTextureManager.obj”(函数“"public: struct LAppTextureManager::TextureInfo * __cdecl LAppTextureManager::CreateTextureFromPngFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?CreateTextureFromPngFile@LAppTextureManager@@QEAAPEAUTextureInfo@1@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)”中)导入
+  SmartWork.vcxproj -> D:\SmartWork\1\SmartWork\x64\Debug\SmartWork.exe

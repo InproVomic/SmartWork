@@ -319,6 +319,11 @@ void ChatClient::applyStyles()
 
 void ChatClient::addMessage(const QString& message, bool isUser)
 {
+    qDebug() << "=== addMessage called ===";
+    qDebug() << "isUser:" << isUser;
+    qDebug() << "Message length:" << message.length();
+    qDebug() << "Message preview:" << message.left(100);
+    
     m_messages.emplace_back(message, isUser, getCurrentTime());
 
     QString html;
@@ -777,6 +782,11 @@ void ChatClient::onTcpDisconnected()
 
 void ChatClient::onTcpResponseReceived(const QString& content, bool success)
 {
+    qDebug() << "=== onTcpResponseReceived called ===";
+    qDebug() << "Content length:" << content.length();
+    qDebug() << "Content preview:" << content.left(100);
+    qDebug() << "m_isRequestInProgress:" << m_isRequestInProgress;
+    
     m_isRequestInProgress = false;
     m_sendButton->setEnabled(true);
 

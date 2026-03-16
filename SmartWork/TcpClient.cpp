@@ -130,6 +130,9 @@ void TcpClient::onReadyRead()
         
         if (success) {
             QString content = obj.value(QLatin1String("content")).toString();
+            qDebug() << "=== Emitting responseReceived signal ===";
+            qDebug() << "Content length:" << content.length();
+            qDebug() << "Content preview:" << content.left(100);
             emit responseReceived(content, true);
         } else {
             QString error = obj.value(QLatin1String("error")).toString();

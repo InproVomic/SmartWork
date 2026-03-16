@@ -36,6 +36,7 @@ class OpenClawClient:
         self.ws = None
         self.message_queue = asyncio.Queue()
         self.connected = False
+        self.current_chat_id = None
 
         self.private_key = ed25519.Ed25519PrivateKey.generate()
         self.device_id = hashlib.sha256(
@@ -98,9 +99,13 @@ class OpenClawClient:
                 if isinstance(content, list) and len(content) > 0:
                     text = content[0].get("text", "")
                     if text:
+                        print(f"[OpenClaw] chat_id={self.current_chat_id}, delta: '{text[:30]}...' (len={len(text)})", flush=True)
                         await self.message_queue.put(("delta", text))
             elif state == "final":
+                print(f"[OpenClaw] chat_id={self.current_chat_id}, final event received", flush=True)
                 await self.message_queue.put(("done", None))
+            else:
+                print(f"[OpenClaw] chat_id={self.current_chat_id}, state={state}, content type={type(content)}", flush=True)
 
         elif msg_type == "event" and event == "chat.error":
             error = data.get("payload", {}).get("error", "Unknown")
@@ -172,9 +177,12 @@ class OpenClawClient:
 
     async def send_message(self, content):
         """发送消息并流式返回响应"""
+        chat_id = f"chat-{int(time.time()*1000)}"
+        self.current_chat_id = chat_id
+        
         chat_req = {
             "type": "req",
-            "id": f"chat-{int(time.time()*1000)}",
+            "id": chat_id,
             "method": "chat.send",
             "params": {
                 "sessionKey": self.session_key,
@@ -183,7 +191,19 @@ class OpenClawClient:
             }
         }
 
+        print(f"[send_message] chat_id={chat_id}, sending message: '{content[:30]}...'", flush=True)
+        
+        while not self.message_queue.empty():
+            try:
+                self.message_queue.get_nowait()
+            except asyncio.QueueEmpty:
+                break
+        print(f"[send_message] queue cleared", flush=True)
+        
         await self.ws.send(json.dumps(chat_req))
+        
+        chunk_count = 0
+        last_full_response = ""
 
         while True:
             try:
@@ -192,15 +212,23 @@ class OpenClawClient:
                 )
 
                 if event_type == "delta":
-                    yield data
+                    chunk_count += 1
+                    last_full_response = data
+                    print(f"[send_message] chat_id={chat_id}, delta #{chunk_count}, len={len(data)}, content='{data[:50]}...'", flush=True)
                 elif event_type == "done":
+                    print(f"[send_message] chat_id={chat_id}, done, total deltas={chunk_count}, final length={len(last_full_response)}", flush=True)
                     break
                 elif event_type == "error":
                     raise Exception(f"Chat error: {data}")
 
             except asyncio.TimeoutError:
-                print("\n[超时] 120秒未收到响应", flush=True)
+                print(f"[send_message] chat_id={chat_id}, timeout after 120s", flush=True)
                 break
+        
+        print(f"[send_message] chat_id={chat_id}, final response: '{last_full_response[:100]}...'", flush=True)
+        
+        self.current_chat_id = None
+        yield last_full_response
 
     async def close(self):
         """关闭连接"""
@@ -273,29 +301,51 @@ class TcpServer:
 
     async def _process_message(self, message):
         """处理消息并返回响应"""
+        import time
+        request_time = time.strftime("%H:%M:%S", time.localtime())
+        print(f"[TCP] [{request_time}] Processing message: '{message[:30]}...'", flush=True)
+        
         full_response = ""
+        response_count = 0
 
         try:
-            async for chunk in self.openclaw_client.send_message(message):
-                full_response += chunk
+            async for response in self.openclaw_client.send_message(message):
+                response_count += 1
+                full_response = response
+                print(f"[TCP] [{request_time}] Got response #{response_count}, length: {len(full_response)}", flush=True)
         except Exception as e:
+            print(f"[TCP] [{request_time}] Error: {e}", flush=True)
             return json.dumps({
                 "success": False,
                 "error": str(e)
             })
 
-        return json.dumps({
+        print(f"[TCP] [{request_time}] Response complete, length: {len(full_response)}", flush=True)
+        print(f"[TCP] [{request_time}] Response preview: '{full_response[:100]}...'", flush=True)
+        
+        result = json.dumps({
             "success": True,
             "content": full_response
-        })
+        }, ensure_ascii=False)
+        
+        print(f"[TCP] [{request_time}] JSON result length: {len(result)}", flush=True)
+        return result
 
     async def _send_response(self, writer, response):
         """发送响应"""
+        import time
+        send_time = time.strftime("%H:%M:%S", time.localtime())
+        
         data = response.encode('utf-8')
         length = len(data)
+        
+        print(f"[TCP] [{send_time}] Sending response, length: {length}", flush=True)
+        
         writer.write(struct.pack('>I', length))
         writer.write(data)
         await writer.drain()
+        
+        print(f"[TCP] [{send_time}] Response sent successfully", flush=True)
 
 
 async def main():
