@@ -1,0 +1,26 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.dll
+*.pdb
+*.log
+
+# Output files
+stdout.txt
+stderr.txt
+
+# Claude
+.claude/
+
+# Thirdparty
+Thirdparty/
