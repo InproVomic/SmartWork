@@ -37,12 +37,12 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>5.12.12_msvc2017_64</QtInstall>
-    <QtModules>core;gui;opengl;openglextensions;widgets;winextras;network</QtModules>
+    <QtModules>core;gui;opengl;openglextensions;widgets;winextras;network;multimedia</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>5.12.12_msvc2017_64</QtInstall>
-    <QtModules>core;gui;opengl;openglextensions;widgets;winextras;network</QtModules>
+    <QtModules>core;gui;opengl;openglextensions;widgets;winextras;network;multimedia</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -127,6 +127,8 @@
     <ClCompile Include="ConfigDialog.cpp" />
     <ClCompile Include="TcpClient.cpp" />
     <ClCompile Include="PythonProcessManager.cpp" />
+    <ClCompile Include="AudioCapture.cpp" />
+    <ClCompile Include="SpeechRecognizer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="GLCore.h" />
@@ -147,6 +149,8 @@
     <QtMoc Include="ConfigDialog.h" />
     <QtMoc Include="TcpClient.h" />
     <QtMoc Include="PythonProcessManager.h" />
+    <QtMoc Include="AudioCapture.h" />
+    <QtMoc Include="SpeechRecognizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

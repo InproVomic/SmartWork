@@ -18,6 +18,7 @@
 #include <QCoreApplication>
 #include <QTimer>
 #include <QDebug>
+#include <QTcpSocket>
 #include <QPainter>
 #include <QBuffer>
 
@@ -37,8 +38,18 @@ ChatClient::ChatClient(QWidget *parent)
     , m_pythonProcess(nullptr)
     , m_reconnectTimer(nullptr)
     , m_reconnectAttempts(0)
+    , m_pythonProcessOwned(false)
     , m_userName(QString::fromUtf8("用户"))
     , m_botName(QString::fromUtf8("助手"))
+    , m_audioCapture(nullptr)
+    , m_voiceInputButton(nullptr)
+    , m_voiceStatusLabel(nullptr)
+    , m_audioLevelSlider(nullptr)
+    , m_recordingDurationLabel(nullptr)
+    , m_voiceIndicatorWidget(nullptr)
+    , m_speechRecognizer(nullptr)
+    , m_pendingVoiceFilePath()
+    , m_isVoiceInputMode(false)
 {
     setWindowTitle(QString::fromUtf8("SmartWork Chat"));
     resize(550, 750);
@@ -79,16 +90,31 @@ ChatClient::ChatClient(QWidget *parent)
     m_reconnectTimer->setSingleShot(true);
     connect(m_reconnectTimer, &QTimer::timeout, this, &ChatClient::onReconnectTimer);
 
+    m_audioCapture = new AudioCapture(this);
+    connect(m_audioCapture, &AudioCapture::recordingStarted, this, &ChatClient::onRecordingStarted);
+    connect(m_audioCapture, &AudioCapture::recordingStopped, this, &ChatClient::onRecordingStopped);
+    connect(m_audioCapture, &AudioCapture::recordingError, this, &ChatClient::onRecordingError);
+    connect(m_audioCapture, &AudioCapture::durationChanged, this, &ChatClient::onRecordingDurationChanged);
+    connect(m_audioCapture, &AudioCapture::audioLevelChanged, this, &ChatClient::onAudioLevelChanged);
+    
+    m_speechRecognizer = new SpeechRecognizer(this);
+    m_speechRecognizer->setApiKey(QLatin1String("TCKY9kKR4KMBr31cgx2AU3g6"), QLatin1String("H9GRcTlI4huq9lSWg7WaoULB4zmu9TCs"));
+    connect(m_speechRecognizer, &SpeechRecognizer::recognitionFinished, this, &ChatClient::onVoiceRecognitionFinished);
+    connect(m_speechRecognizer, &SpeechRecognizer::recognitionError, this, &ChatClient::onVoiceRecognitionError);
+
     setupUI();
     applyStyles();
 
     loadConfig();
     loadAvatarConfig();
+    
+    QTimer::singleShot(500, this, &ChatClient::initializePythonProcess);
 }
 
 ChatClient::~ChatClient()
 {
-    if (m_pythonProcess) {
+    if (m_pythonProcess && m_pythonProcessOwned) {
+        qDebug() << "Stopping Python process owned by this instance...";
         m_pythonProcess->stopProcess();
     }
     saveConfig();
@@ -108,6 +134,23 @@ void ChatClient::initializePythonProcess()
     qDebug() << "Application dir:" << appDir;
     logStream << "Application dir: " << appDir << "\n";
     logStream << "Log file path: " << logPath << "\n";
+    
+    QTcpSocket testSocket;
+    testSocket.connectToHost(QLatin1String("127.0.0.1"), 18790);
+    bool alreadyRunning = testSocket.waitForConnected(1000);
+    testSocket.abort();
+    
+    if (alreadyRunning) {
+        logStream << "Python service already running on port 18790, connecting...\n";
+        logStream.flush();
+        qDebug() << "Python service already running, connecting directly...";
+        m_statusLabel->setText(QString::fromUtf8("连接到现有Python服务..."));
+        m_pythonProcessOwned = false;
+        m_tcpClient->connectToServer(QLatin1String("127.0.0.1"), 18790);
+        return;
+    }
+    
+    m_pythonProcessOwned = true;
     
     QStringList possiblePaths;
     
@@ -231,21 +274,52 @@ void ChatClient::setupUI()
     auto* inputContainer = new QWidget(this);
     auto* inputLayout = new QHBoxLayout(inputContainer);
     inputLayout->setContentsMargins(0, 0, 0, 0);
-    inputLayout->setSpacing(10);
+    inputLayout->setSpacing(8);
 
     m_inputEdit = new QLineEdit(this);
     m_inputEdit->setPlaceholderText(QString::fromUtf8("输入消息..."));
     m_inputEdit->setObjectName(QLatin1String("inputEdit"));
+
+    m_voiceInputButton = new QPushButton(QString::fromUtf8("🎤"), this);
+    m_voiceInputButton->setObjectName(QLatin1String("voiceInputButton"));
+    m_voiceInputButton->setCheckable(true);
+    m_voiceInputButton->setFixedSize(45, 45);
+    m_voiceInputButton->setToolTip(QString::fromUtf8("点击开始语音输入"));
 
     m_sendButton = new QPushButton(QString::fromUtf8("发送"), this);
     m_sendButton->setObjectName(QLatin1String("sendButton"));
     m_sendButton->setFixedSize(80, 45);
 
     inputLayout->addWidget(m_inputEdit);
+    inputLayout->addWidget(m_voiceInputButton);
     inputLayout->addWidget(m_sendButton);
+
+    m_voiceStatusLabel = new QLabel(QString::fromUtf8(""), this);
+    m_voiceStatusLabel->setStyleSheet(QLatin1String("color: #007AFF; font-size: 12px;"));
+    m_voiceStatusLabel->setAlignment(Qt::AlignCenter);
+
+    m_audioLevelSlider = new QSlider(Qt::Horizontal, this);
+    m_audioLevelSlider->setRange(0, 100);
+    m_audioLevelSlider->setValue(0);
+    m_audioLevelSlider->setEnabled(false);
+    m_audioLevelSlider->setFixedHeight(6);
+
+    m_recordingDurationLabel = new QLabel(QString::fromUtf8("00:00"), this);
+    m_recordingDurationLabel->setStyleSheet(QLatin1String("color: #666; font-size: 12px; font-family: monospace;"));
+    m_recordingDurationLabel->setAlignment(Qt::AlignCenter);
+
+    m_voiceIndicatorWidget = new QWidget(this);
+    auto* voiceIndicatorLayout = new QHBoxLayout(m_voiceIndicatorWidget);
+    voiceIndicatorLayout->setContentsMargins(0, 0, 0, 0);
+    voiceIndicatorLayout->setSpacing(10);
+    voiceIndicatorLayout->addWidget(m_voiceStatusLabel);
+    voiceIndicatorLayout->addWidget(m_audioLevelSlider);
+    voiceIndicatorLayout->addWidget(m_recordingDurationLabel);
+    m_voiceIndicatorWidget->setVisible(false);
 
     mainLayout->addWidget(headerWidget);
     mainLayout->addWidget(m_chatDisplay, 1);
+    mainLayout->addWidget(m_voiceIndicatorWidget);
     mainLayout->addWidget(inputContainer);
 
     connect(m_sendButton, &QPushButton::clicked, this, &ChatClient::onSendClicked);
@@ -253,6 +327,7 @@ void ChatClient::setupUI()
     connect(m_configButton, &QPushButton::clicked, this, &ChatClient::onConfigClicked);
     connect(m_exportButton, &QPushButton::clicked, this, &ChatClient::onExportClicked);
     connect(m_chatDisplay->verticalScrollBar(), &QScrollBar::valueChanged, this, &ChatClient::onScrollChanged);
+    connect(m_voiceInputButton, &QPushButton::clicked, this, &ChatClient::onVoiceInputClicked);
 
     QString welcome = QString::fromUtf8("欢迎使用 SmartWork Chat！\n\n正在连接Python服务...");
     addMessage(welcome, false);
@@ -313,6 +388,34 @@ void ChatClient::applyStyles()
         "}"
         "QPushButton#configButton:pressed, QPushButton#exportButton:pressed, QPushButton#avatarConfigButton:pressed {"
         "    background-color: #e0e0e0;"
+        "}"
+        "QPushButton#voiceInputButton {"
+        "    background-color: white;"
+        "    border: 2px solid #e0e0e0;"
+        "    border-radius: 22px;"
+        "    font-size: 20px;"
+        "}"
+        "QPushButton#voiceInputButton:hover {"
+        "    border-color: #007AFF;"
+        "    background-color: #f0f8ff;"
+        "}"
+        "QPushButton#voiceInputButton:checked {"
+        "    background-color: #FF3B30;"
+        "    border-color: #FF3B30;"
+        "    color: white;"
+        "}"
+        "QSlider::groove:horizontal {"
+        "    border: 1px solid #e0e0e0;"
+        "    height: 4px;"
+        "    background: #e0e0e0;"
+        "    border-radius: 2px;"
+        "}"
+        "QSlider::handle:horizontal {"
+        "    background: #007AFF;"
+        "    border: none;"
+        "    width: 10px;"
+        "    margin: -3px 0;"
+        "    border-radius: 5px;"
         "}"
     ));
 }
@@ -902,4 +1005,127 @@ QJsonArray ChatClient::getHistoryForApi() const
     }
 
     return history;
+}
+
+QString ChatClient::formatDuration(qint64 milliseconds)
+{
+    int seconds = static_cast<int>(milliseconds / 1000);
+    int minutes = seconds / 60;
+    seconds = seconds % 60;
+    return QString::fromUtf8("%1:%2")
+        .arg(minutes, 2, 10, QLatin1Char('0'))
+        .arg(seconds, 2, 10, QLatin1Char('0'));
+}
+
+void ChatClient::onVoiceInputClicked()
+{
+    if (m_audioCapture->state() == AudioCapture::Recording) {
+        m_audioCapture->stopRecording();
+        m_voiceInputButton->setChecked(false);
+        m_voiceStatusLabel->setText(QString::fromUtf8("正在识别..."));
+        m_audioLevelSlider->setEnabled(false);
+        m_audioLevelSlider->setValue(0);
+    } else {
+        if (m_audioCapture->startRecording()) {
+            m_isVoiceInputMode = true;
+            m_voiceInputButton->setChecked(true);
+            m_voiceStatusLabel->setText(QString::fromUtf8("正在录音..."));
+            m_audioLevelSlider->setEnabled(true);
+            m_voiceIndicatorWidget->setVisible(true);
+            m_statusLabel->setText(QString::fromUtf8("正在录音，点击停止并识别..."));
+        }
+    }
+}
+
+void ChatClient::onRecordingStarted()
+{
+    qDebug() << "Recording started";
+    m_voiceStatusLabel->setText(QString::fromUtf8("正在录音..."));
+    m_recordingDurationLabel->setText(QString::fromUtf8("00:00"));
+    m_voiceIndicatorWidget->setVisible(true);
+}
+
+void ChatClient::onRecordingStopped(const QString& filePath)
+{
+    qDebug() << "Recording stopped, file:" << filePath;
+    m_voiceInputButton->setChecked(false);
+    m_audioLevelSlider->setEnabled(false);
+    m_audioLevelSlider->setValue(0);
+    
+    if (m_isVoiceInputMode) {
+        m_pendingVoiceFilePath = filePath;
+        m_voiceStatusLabel->setText(QString::fromUtf8("正在识别..."));
+        m_statusLabel->setText(QString::fromUtf8("正在识别语音..."));
+        m_speechRecognizer->recognizeFile(filePath);
+    } else {
+        m_voiceStatusLabel->setText(QString::fromUtf8("已保存"));
+        m_voiceIndicatorWidget->setVisible(false);
+        m_statusLabel->setText(QString::fromUtf8("录音已保存"));
+    }
+}
+
+void ChatClient::onRecordingError(const QString& error)
+{
+    qDebug() << "Recording error:" << error;
+    m_voiceInputButton->setChecked(false);
+    m_voiceStatusLabel->setText(QString::fromUtf8("录音错误"));
+    m_audioLevelSlider->setEnabled(false);
+    m_audioLevelSlider->setValue(0);
+    m_voiceIndicatorWidget->setVisible(false);
+    m_isVoiceInputMode = false;
+    
+    m_statusLabel->setText(QString::fromUtf8("录音错误: ") + error.left(30));
+}
+
+void ChatClient::onRecordingDurationChanged(qint64 milliseconds)
+{
+    m_recordingDurationLabel->setText(formatDuration(milliseconds));
+}
+
+void ChatClient::onAudioLevelChanged(qreal level)
+{
+    int sliderValue = static_cast<int>(level * 100);
+    m_audioLevelSlider->setValue(sliderValue);
+}
+
+void ChatClient::onVoiceRecognitionFinished(const SpeechRecognitionResult& result)
+{
+    if (!m_pendingVoiceFilePath.isEmpty()) {
+        QFile::remove(m_pendingVoiceFilePath);
+        qDebug() << "Deleted voice file:" << m_pendingVoiceFilePath;
+        m_pendingVoiceFilePath.clear();
+    }
+    
+    m_voiceIndicatorWidget->setVisible(false);
+    m_isVoiceInputMode = false;
+    
+    if (result.success) {
+        m_statusLabel->setText(QString::fromUtf8("语音输入完成"));
+        
+        QString recognizedText = result.text;
+        
+        if (!recognizedText.isEmpty()) {
+            m_inputEdit->setText(recognizedText);
+            m_inputEdit->setFocus();
+        } else {
+            m_statusLabel->setText(QString::fromUtf8("未识别到有效内容"));
+        }
+    } else {
+        m_statusLabel->setText(QString::fromUtf8("识别失败: ") + result.error.left(20));
+    }
+}
+
+void ChatClient::onVoiceRecognitionError(const QString& error)
+{
+    qDebug() << "Speech recognition error:" << error;
+    
+    if (!m_pendingVoiceFilePath.isEmpty()) {
+        QFile::remove(m_pendingVoiceFilePath);
+        qDebug() << "Deleted voice file:" << m_pendingVoiceFilePath;
+        m_pendingVoiceFilePath.clear();
+    }
+    
+    m_voiceIndicatorWidget->setVisible(false);
+    m_isVoiceInputMode = false;
+    m_statusLabel->setText(QString::fromUtf8("识别错误: ") + error.left(30));
 }

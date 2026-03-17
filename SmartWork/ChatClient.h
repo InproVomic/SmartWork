@@ -3,6 +3,8 @@
 
 #include "ApiManager.h"
 #include "ConfigDialog.h"
+#include "AudioCapture.h"
+#include "SpeechRecognizer.h"
 #include <QWidget>
 #include <QLineEdit>
 #include <QPushButton>
@@ -14,6 +16,7 @@
 #include <vector>
 #include <QProcess>
 #include <QPixmap>
+#include <QSlider>
 
 class TcpClient;
 class PythonProcessManager;
@@ -58,6 +61,16 @@ private slots:
     void onPythonProcessError(const QString& error);
     void onReconnectTimer();
     void onScrollChanged(int value);
+    
+    void onRecordingStarted();
+    void onRecordingStopped(const QString& filePath);
+    void onRecordingError(const QString& error);
+    void onRecordingDurationChanged(qint64 milliseconds);
+    void onAudioLevelChanged(qreal level);
+    
+    void onVoiceInputClicked();
+    void onVoiceRecognitionFinished(const SpeechRecognitionResult& result);
+    void onVoiceRecognitionError(const QString& error);
 
 private:
     void setupUI();
@@ -75,6 +88,7 @@ private:
     QString getAvatarConfigPath() const;
     void refreshMessages();
     QPixmap createDefaultAvatar(const QString& name, const QColor& color);
+    QString formatDuration(qint64 milliseconds);
 
     ApiManager* m_apiManager;
     ConfigDialog* m_configDialog;
@@ -92,6 +106,7 @@ private:
     QTimer* m_reconnectTimer;
     int m_reconnectAttempts;
     bool m_isRequestInProgress;
+    bool m_pythonProcessOwned;
     
     QString m_userName;
     QString m_botName;
@@ -99,6 +114,17 @@ private:
     QString m_botAvatarPath;
     QPixmap m_userAvatar;
     QPixmap m_botAvatar;
+    
+    AudioCapture* m_audioCapture;
+    QPushButton* m_voiceInputButton;
+    QLabel* m_voiceStatusLabel;
+    QSlider* m_audioLevelSlider;
+    QLabel* m_recordingDurationLabel;
+    QWidget* m_voiceIndicatorWidget;
+    
+    SpeechRecognizer* m_speechRecognizer;
+    QString m_pendingVoiceFilePath;
+    bool m_isVoiceInputMode;
 };
 
 #endif // CHATCLIENT_H

@@ -104,11 +104,16 @@ class OpenClawClient:
             elif state == "final":
                 print(f"[OpenClaw] chat_id={self.current_chat_id}, final event received", flush=True)
                 await self.message_queue.put(("done", None))
+            elif state == "error":
+                error_msg = payload.get("error", {}).get("message", "Unknown error")
+                print(f"[OpenClaw] chat_id={self.current_chat_id}, error: {error_msg}", flush=True)
+                await self.message_queue.put(("error", error_msg))
             else:
                 print(f"[OpenClaw] chat_id={self.current_chat_id}, state={state}, content type={type(content)}", flush=True)
 
         elif msg_type == "event" and event == "chat.error":
             error = data.get("payload", {}).get("error", "Unknown")
+            print(f"[OpenClaw] chat.error event: {error}", flush=True)
             await self.message_queue.put(("error", error))
 
     async def _do_connect(self):
